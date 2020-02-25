@@ -70,7 +70,7 @@ struct
   let top (s : stack) : int = 
     match s with 
     | [] -> raise EmptyStack
-    | hd :: tl -> hd
+    | hd :: _ -> hd
 
   (* pop s -- Returns a stack with the topmost element from s
      removed, raising the EmptyStack exception if there is no
