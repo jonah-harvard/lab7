@@ -172,6 +172,7 @@ let bad_el = IntListStack.top (invert_stack (small_stack ())) ;;
 
 module type INT_STACK =
 sig
+  exception EmptyStack
   type stack
   val empty : stack
   val push : int -> stack -> stack
